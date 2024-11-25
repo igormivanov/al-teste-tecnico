@@ -2,7 +2,6 @@ package br.com.actionlabs.carboncalc.services.Calculation;
 
 import br.com.actionlabs.carboncalc.dto.*;
 import br.com.actionlabs.carboncalc.exceptions.ResourceNotFoundException;
-import br.com.actionlabs.carboncalc.mapper.CalculationMapper;
 import br.com.actionlabs.carboncalc.model.Calculation;
 import br.com.actionlabs.carboncalc.repository.CalculationRepository;
 import br.com.actionlabs.carboncalc.services.CarbonEmissionCalculator.CarbonEmissionCalculatorService;

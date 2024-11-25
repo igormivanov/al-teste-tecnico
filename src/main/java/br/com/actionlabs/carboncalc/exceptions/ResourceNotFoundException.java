@@ -1,4 +1,4 @@
-package br.com.actionlabs.carboncalc.exceptions.handler;
+package br.com.actionlabs.carboncalc.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

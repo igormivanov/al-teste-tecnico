@@ -1,7 +1,7 @@
 package br.com.actionlabs.carboncalc.services.Calculation;
 
 import br.com.actionlabs.carboncalc.dto.*;
-import br.com.actionlabs.carboncalc.exceptions.handler.ResourceNotFoundException;
+import br.com.actionlabs.carboncalc.exceptions.ResourceNotFoundException;
 import br.com.actionlabs.carboncalc.mapper.CalculationMapper;
 import br.com.actionlabs.carboncalc.model.Calculation;
 import br.com.actionlabs.carboncalc.repository.CalculationRepository;
@@ -19,8 +19,6 @@ public class CalculationServiceImpl implements CalculationService{
 
     @Override
     public StartCalcResponseDTO createCalculation(StartCalcRequestDTO startCalcRequestDTO) {
-
-        //Calculation entity = CalculationMapper.toEntity(startCalcRequestDTO);
 
         Calculation entity = new Calculation();
 

@@ -1,5 +1,6 @@
 package br.com.actionlabs.carboncalc.exceptions.handler;
 
+import br.com.actionlabs.carboncalc.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -39,4 +40,32 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ExceptionResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
+        ExceptionResponse response = new ExceptionResponse(
+                "Illegal Argument Exception",
+                HttpStatus.BAD_REQUEST.value(),
+                ex.getClass().getName(),
+                ex.getMessage(),
+                LocalDateTime.now(),
+                "",
+                ""
+        );
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ExceptionResponse> handleResourceNotFoundException(ResourceNotFoundException ex) {
+        ExceptionResponse response = new ExceptionResponse(
+                "Resource Not Found",
+                HttpStatus.NOT_FOUND.value(),
+                ex.getClass().getName(),
+                ex.getMessage(),
+                LocalDateTime.now(),
+                "",
+                ""
+        );
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
 }

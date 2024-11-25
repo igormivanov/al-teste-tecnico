@@ -1,7 +1,7 @@
 package br.com.actionlabs.carboncalc.services.CarbonEmissionCalculator;
 
 import br.com.actionlabs.carboncalc.dto.TransportationDTO;
-import br.com.actionlabs.carboncalc.exceptions.handler.ResourceNotFoundException;
+import br.com.actionlabs.carboncalc.exceptions.ResourceNotFoundException;
 import br.com.actionlabs.carboncalc.model.EnergyEmissionFactor;
 import br.com.actionlabs.carboncalc.model.SolidWasteEmissionFactor;
 import br.com.actionlabs.carboncalc.model.TransportationEmissionFactor;

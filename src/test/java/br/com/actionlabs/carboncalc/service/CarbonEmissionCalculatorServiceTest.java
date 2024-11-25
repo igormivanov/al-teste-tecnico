@@ -1,14 +1,9 @@
 package br.com.actionlabs.carboncalc.service;
 
-import br.com.actionlabs.carboncalc.dto.TransportationDTO;
-import br.com.actionlabs.carboncalc.enums.TransportationType;
-import br.com.actionlabs.carboncalc.exceptions.handler.ResourceNotFoundException;
-import br.com.actionlabs.carboncalc.model.SolidWasteEmissionFactor;
-import br.com.actionlabs.carboncalc.model.TransportationEmissionFactor;
+import br.com.actionlabs.carboncalc.exceptions.ResourceNotFoundException;
 import br.com.actionlabs.carboncalc.repository.EnergyEmissionFactorRepository;
 import br.com.actionlabs.carboncalc.repository.SolidWasteEmissionFactorRepository;
 import br.com.actionlabs.carboncalc.repository.TransportationEmissionFactorRepository;
-import br.com.actionlabs.carboncalc.services.CarbonEmissionCalculator.CarbonEmissionCalculatorService;
 import br.com.actionlabs.carboncalc.services.CarbonEmissionCalculator.CarbonEmissionCalculatorServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -17,7 +12,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.List;
 import java.util.Optional;
 
 import static br.com.actionlabs.carboncalc.constants.Constants.*;

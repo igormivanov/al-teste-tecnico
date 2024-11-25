@@ -7,10 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection = "calculations")
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Document(collection = "calculations")
 public class Calculation {
 
     @Id
